@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Урок — Чат-бот в Scratch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand__logo">S</div>
+        <div class="brand__text">
+          <div class="brand__title">Scratch</div>
+          <div class="brand__sub">Электив • 5 класс</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <div class="nav__title">Уроки</div>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="lesson-01.html">Урок 1</a></li>
+          <li><a class="nav__link" href="lesson-02.html">Урок 2</a></li>
+          <li><a class="nav__link" href="lesson-03.html">Урок 3</a></li>
+          <li><a class="nav__link" href="lesson-04.html">Урок 4</a></li>
+          <li><a class="nav__link" href="lesson-05.html">Урок 5</a></li>
+          <li><a class="nav__link" href="lesson-06.html">Урок 6</a></li>
+          <li><a class="nav__link" href="lesson-07.html">Урок 7</a></li>
+          <li><a class="nav__link" href="lesson-08.html">Урок 8</a></li>
+          <li><a class="nav__link" href="lesson-09.html">Урок 9</a></li>
+          <li><a class="nav__link" href="lesson-10.html">Урок 10</a></li>
+          <li><a class="nav__link" href="lesson-11.html">Урок 11</a></li>
+          <li><a class="nav__link" href="lesson-12.html">Урок 12</a></li>
+          <li><a class="nav__link  is-active" href="lesson-13.html">Урок 13</a></li>
+          <li><a class="nav__link" href="lesson-14.html">Урок 14</a></li>
+          <li><a class="nav__link" href="lesson-15.html">Финал👑</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar__hint">
+        <div class="sidebar__hintTitle">Тема урока</div>
+        <div class="sidebar__hintText">
+          Создаём чат-бота: он общается, выполняет команды и умеет 3–5 действий (время, прыжок, зовёт друга, «угадай число» и др.).
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="blob blob--purple" aria-hidden="true"></div>
+      <div class="blob blob--yellow" aria-hidden="true"></div>
+
+      <header class="header">
+        <div class="chip">Урок • 2 часа</div>
+        <h1 class="title">Создание чат-бота в среде Scratch</h1>
+        <p class="subtitle">
+          Сегодня мы сделаем чат-бота, который умеет общаться и выполнять команды.
+          Бот будет выполнять <strong>3–5 заданий</strong>: например, говорить время, прыгать,
+          звать друга, играть в «угадай число» и другие действия.
+        </p>
+      </header>
+
+      <!-- Видео пример -->
+      <section class="section">
+        <h2 class="section__title">Как выглядит результат (пример)</h2>
+
+        <article class="videoCard videoCard--demo" style="margin-top:12px;">
+          <div class="videoFrame">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Чат-бот в Scratch — пример"
+              allowfullscreen></iframe>
+          </div>
+        </article>
+
+        <!-- Задачи -->
+        <div style="margin-top:18px;">
+          <h3 style="margin-bottom:10px;">Задачи на урок:</h3>
+
+          <div class="planList" id="chatbot-tasks">
+            <label class="planItem"><input type="checkbox" /><span>Сделать приветствие и имя пользователя (спросить и ждать)</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Сделать меню команд (что бот умеет)</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Реализовать 3–5 команд (действий)</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Добавить «если…то…иначе» для ответов</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Сделать повтор: бот ждёт команды снова (цикл)</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Финальный тест: все команды работают корректно</span></label>
+          </div>
+
+          <div class="planProgress" id="chatbot-progress" style="margin-top:10px;"></div>
+        </div>
+      </section>
+
+      <!-- Видео разбор -->
+      <section class="section">
+        <h2 class="section__title">Видео «Разбор»</h2>
+        <p class="section__hint">Пошагово собираем бота: меню, команды и логика общения.</p>
+
+        <article class="videoCard" style="margin-top:12px;">
+          <div class="videoCard__head">
+            <div class="videoCard__num">★</div>
+            <div class="videoCard__meta">
+              <div class="videoCard__title">Разбор: чат-бот и команды</div>
+              <div class="videoCard__desc">Как хранить команду, проверять её и запускать действие.</div>
+            </div>
+          </div>
+
+          <div class="videoFrame">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Разбор чат-бота"
+              allowfullscreen></iframe>
+          </div>
+        </article>
+      </section>
+
+      <!-- Теория -->
+      <section class="section">
+        <h2 class="section__title">Теория</h2>
+        <p class="section__hint">Открой, если хочешь понять, как устроены чат-боты.</p>
+
+        <details class="theory-accordion">
+          <summary class="theory-summary">
+            <span class="theory-title">Теория</span>
+            <span class="theory-hint">Нажми, чтобы открыть</span>
+          </summary>
+
+          <div class="theory-content">
+            <h4>Как работает чат-бот в Scratch</h4>
+
+            <h5>1) Команда</h5>
+            <p>
+              Команда — это слово или фраза, которую вводит пользователь.
+              Мы сохраняем её в переменную (например, «команда») и проверяем через условия.
+            </p>
+
+            <h5>2) Логика «если…то…иначе»</h5>
+            <ul>
+              <li>если команда = «время» → бот говорит время</li>
+              <li>если команда = «прыгай» → бот прыгает</li>
+              <li>иначе → бот говорит «Я не понял команду»</li>
+            </ul>
+
+            <h5>3) Цикл общения</h5>
+            <p>
+              Чтобы бот работал постоянно, мы делаем цикл: спросить команду → выполнить → спросить снова.
+            </p>
+
+            <h5>4) Какие команды можно сделать</h5>
+            <ul>
+              <li><strong>время</strong> — бот говорит текущее время;</li>
+              <li><strong>прыгай</strong> — бот подпрыгивает;</li>
+              <li><strong>позови друга</strong> — появляется второй спрайт;</li>
+              <li><strong>угадай число</strong> — мини-игра внутри бота;</li>
+              <li><strong>шутка</strong> — бот говорит случайную фразу.</li>
+            </ul>
+          </div>
+        </details>
+      </section>
+
+      <!-- Подсказки (скрытые видео) -->
+      <section class="section">
+        <h2 class="section__title">Подсказки (если что-то не получается)</h2>
+        <p class="section__hint">Открывай только нужную подсказку.</p>
+
+        <details class="helpPanel" style="margin-top:12px;">
+          <summary class="helpPanel__summary">
+            <span class="helpPanel__badge">Подсказка</span>
+            <span class="helpPanel__title">Как сделать меню команд</span>
+            <span class="helpPanel__chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="helpPanel__body">
+            <div class="videoFrame videoFrame--soft">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Меню команд" allowfullscreen></iframe>
+            </div>
+          </div>
+        </details>
+
+        <details class="helpPanel" style="margin-top:12px;">
+          <summary class="helpPanel__summary">
+            <span class="helpPanel__badge">Подсказка</span>
+            <span class="helpPanel__title">Команда «время»</span>
+            <span class="helpPanel__chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="helpPanel__body">
+            <div class="videoFrame videoFrame--soft">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Команда время" allowfullscreen></iframe>
+            </div>
+          </div>
+        </details>
+
+        <details class="helpPanel" style="margin-top:12px;">
+          <summary class="helpPanel__summary">
+            <span class="helpPanel__badge">Подсказка</span>
+            <span class="helpPanel__title">Команда «прыгай»</span>
+            <span class="helpPanel__chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="helpPanel__body">
+            <div class="videoFrame videoFrame--soft">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Команда прыгай" allowfullscreen></iframe>
+            </div>
+          </div>
+        </details>
+
+        <details class="helpPanel" style="margin-top:12px;">
+          <summary class="helpPanel__summary">
+            <span class="helpPanel__badge">Подсказка</span>
+            <span class="helpPanel__title">Команда «позови друга»</span>
+            <span class="helpPanel__chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="helpPanel__body">
+            <div class="videoFrame videoFrame--soft">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Команда позови друга" allowfullscreen></iframe>
+            </div>
+          </div>
+        </details>
+
+        <details class="helpPanel" style="margin-top:12px;">
+          <summary class="helpPanel__summary">
+            <span class="helpPanel__badge">Подсказка</span>
+            <span class="helpPanel__title">Игра «угадай число» внутри бота</span>
+            <span class="helpPanel__chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="helpPanel__body">
+            <div class="videoFrame videoFrame--soft">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Угадай число в боте" allowfullscreen></iframe>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- Материалы -->
+      <section class="section">
+        <h2 class="section__title">Скачиваемые материалы</h2>
+        <p class="section__hint">Если нужно — скачай основу чат-бота и дополни её командами.</p>
+
+        <a class="gameDownloadBtn" href="assets/chatbot-osnova.sb3" download>
+          <span class="gameDownloadIcon">🤖</span>
+          <span class="gameDownloadText">Скачать основу чат-бота (Scratch)</span>
+          <span class="gameDownloadArrow">→</span>
+        </a>
+
+        <a class="download" href="#" download style="margin-top:14px;">
+          <span class="download__icon">📄</span>
+          <span class="download__text">Скачать шпаргалку</span>
+          <span class="download__arrow">→</span>
+        </a>
+      </section>
+
+      <!-- Сдача -->
+      <section class="section section--form">
+        <h2 class="section__title">Сдать работу</h2>
+        <p class="section__hint">Вставь Google Form через iframe, чтобы ответы сохранялись в таблицу.</p>
+        <!-- Вставь сюда iframe Google Form -->
+      </section>
+
+      <!-- Рефлексия -->
+      <section class="section section--form">
+        <h2 class="section__title">Рефлексия</h2>
+        <p class="section__hint">Оцени, как прошёл урок и какое настроение после занятия.</p>
+
+        <form class="form">
+          <label class="field">
+            <span class="field__label">Насколько ты понял(а) логику чат-бота? (1–5)</span>
+            <input class="field__input" type="number" min="1" max="5" placeholder="1–5" />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Настроение после урока (1–5)</span>
+            <input class="field__input" type="number" min="1" max="5" placeholder="1–5" />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Какая команда понравилась больше всего?</span>
+            <input class="field__input" type="text" placeholder="Например: время / прыгай / угадай число" />
+          </label>
+
+          <button class="btn" type="button">Отправить</button>
+          <div class="form__note">Лучше заменить на Google Form, чтобы ответы сохранялись в таблицу.</div>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__line"></div>
+        <div class="footer__text">Урок • Scratch • 5 класс</div>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Сохранение галочек задач -->
+  <script>
+    (function () {
+      const container = document.getElementById("chatbot-tasks");
+      const progressEl = document.getElementById("chatbot-progress");
+      if (!container) return;
+
+      const boxes = Array.from(container.querySelectorAll("input[type='checkbox']"));
+      const key = "scratch-chatbot-tasks-v1";
+
+      function update() {
+        if (!progressEl) return;
+        const total = boxes.length;
+        const done = boxes.filter(b => b.checked).length;
+        progressEl.textContent = `Выполнено: ${done} из ${total}`;
+        progressEl.style.color = done === total ? "var(--purple)" : "var(--muted)";
+        progressEl.style.fontWeight = "800";
+      }
+
+      function load() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(key) || "[]");
+          boxes.forEach((b, i) => b.checked = !!saved[i]);
+        } catch(e) {}
+        update();
+      }
+
+      function save() {
+        localStorage.setItem(key, JSON.stringify(boxes.map(b => b.checked)));
+        update();
+      }
+
+      boxes.forEach(b => b.addEventListener("change", save));
+      load();
+    })();
+  </script>
+</body>
+</html>
