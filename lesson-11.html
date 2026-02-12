@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Урок 11 — Игра «Змейка»</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand__logo">S</div>
+        <div class="brand__text">
+          <div class="brand__title">Scratch</div>
+          <div class="brand__sub">Электив • 5 класс</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <div class="nav__title">Уроки</div>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="lesson-01.html">Урок 1</a></li>
+          <li><a class="nav__link" href="lesson-02.html">Урок 2</a></li>
+          <li><a class="nav__link" href="lesson-03.html">Урок 3</a></li>
+          <li><a class="nav__link" href="lesson-04.html">Урок 4</a></li>
+          <li><a class="nav__link" href="lesson-05.html">Урок 5</a></li>
+          <li><a class="nav__link" href="lesson-06.html">Урок 6</a></li>
+          <li><a class="nav__link" href="lesson-07.html">Урок 7</a></li>
+          <li><a class="nav__link" href="lesson-08.html">Урок 8</a></li>
+          <li><a class="nav__link" href="lesson-09.html">Урок 9</a></li>
+          <li><a class="nav__link" href="lesson-10.html">Урок 10</a></li>
+          <li><a class="nav__link is-active" href="lesson-11.html">Урок 11</a></li>
+          <li><a class="nav__link" href="lesson-12.html">Урок 12</a></li>
+          <li><a class="nav__link" href="lesson-13.html">Урок 13</a></li>
+          <li><a class="nav__link" href="lesson-14.html">Урок 14</a></li>
+          <li><a class="nav__link" href="lesson-15.html">Финал👑</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar__hint">
+        <div class="sidebar__hintTitle">Подсказка</div>
+        <div class="sidebar__hintText">
+          Этот урок рассчитан на 2 часа. Можно делать по шагам: сначала «Часть 1», потом «Часть 2».
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="blob blob--purple" aria-hidden="true"></div>
+      <div class="blob blob--yellow" aria-hidden="true"></div>
+
+      <header class="header">
+        <div class="chip">Урок 11 • 2 часа</div>
+        <h1 class="title">Создание игры «Змейка»</h1>
+        <p class="subtitle">
+          Сегодня мы сделаем классическую игру «Змейка»: управляем головой, собираем еду,
+          растём хвостом и стараемся не проиграть. Это один из самых крутых проектов,
+          потому что здесь есть и движение, и логика, и создание объектов, и игровые правила.
+        </p>
+      </header>
+
+       <!-- Демонстрация -->
+      <section class="section">
+        <h2 class="section__title">Игра «Змейка» — как должен выглядеть результат</h2>
+        <div class="videoCard videoCard--demo" style="margin-top:12px;">
+          <div class="videoFrame">
+           <iframe width="720" height="405" src="https://rutube.ru/play/embed/b9cd9dbf7e5f2768d998760a4633bfec/?p=UKOJ_Q6oAWUrvSptFgLriw&skinColor=FFB300"  allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- План на 2 урока -->
+      <section class="section">
+        <h2 class="section__title">План на 2 часа</h2>
+        <p class="section__hint">Отмечай пункты по мере выполнения — галочки сохранятся на этом компьютере.</p>
+
+        <!-- Часть 1 -->
+        <div class="videoCard" style="margin-top:12px;">
+          <div class="videoCard__head">
+            <div class="videoCard__num">1</div>
+            <div class="videoCard__meta">
+              <div class="videoCard__title">Часть 1 (первый час): основа змейки</div>
+              <div class="videoCard__desc">Создаём голову, управление и постоянное движение.</div>
+            </div>
+          </div>
+
+          <div class="planList" id="lesson11-plan-a">
+            <label class="planItem"><input type="checkbox" /><span>Подготовить сцену (фон, границы поля)</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Создать спрайт «Голова» и настроить костюм</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Сделать управление стрелками (вверх/вниз/влево/вправо)</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Добавить постоянное движение головы</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Скорость: переменная или фиксированный шаг</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Тест: голова движется ровно и поворачивает правильно</span></label>
+          </div>
+
+          <div class="planProgress" id="lesson11-progress-a" style="margin-top:10px;"></div>
+        </div>
+
+        <!-- Часть 2 -->
+        <div class="videoCard" style="margin-top:12px;">
+          <div class="videoCard__head">
+            <div class="videoCard__num">2</div>
+            <div class="videoCard__meta">
+              <div class="videoCard__title">Часть 2 (второй час): еда, хвост и правила</div>
+              <div class="videoCard__desc">Добавляем еду, рост хвоста и ограничения, чтобы игра стала настоящей.</div>
+            </div>
+          </div>
+
+          <div class="planList" id="lesson11-plan-b">
+            <label class="planItem"><input type="checkbox" /><span>Создать спрайт «Еда»</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Сделать появление еды в случайном месте</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Добавить счёт (очки) за съеденную еду</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Создать хвост (клоны/сегменты) и рост</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Проигрыш при столкновении (стена/свой хвост)</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Бонус: игровое ограничение — нельзя разворачиваться назад</span></label>
+            <label class="planItem"><input type="checkbox" /><span>Финальный тест: игра запускается, работает, можно выиграть больше очков</span></label>
+          </div>
+
+          <div class="planProgress" id="lesson11-progress-b" style="margin-top:10px;"></div>
+        </div>
+      </section>
+
+     
+
+      <!-- Основное видео -->
+      <section class="section">
+        <h2 class="section__title">Основное видео</h2>
+        <p class="section__hint">Здесь объясняется суть игры и показывается, как её делать по шагам.</p>
+
+        <article class="videoCard" style="margin-top:12px;">
+          <div class="videoCard__head">
+            <div class="videoCard__num">★</div>
+            <div class="videoCard__meta">
+              <div class="videoCard__title">Суть игры и создание «Змейки»</div>
+              <div class="videoCard__desc">Голова → управление → еда → хвост → правила.</div>
+            </div>
+          </div>
+          <div class="videoFrame">
+           <iframe width="720" height="405" src="https://rutube.ru/play/embed/7a54ba51384d34d190bcc3b97dd25923?skinColor=FFB300"  allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          </div>
+        </article>
+      </section>
+
+      <!-- Скрытая плашка "Теория" (аккордеон) -->
+<details class="theory-accordion">
+  <summary class="theory-summary">
+    <span class="theory-title">Теория</span>
+    <span class="theory-hint">Нажми, чтобы открыть</span>
+  </summary>
+
+  <div class="theory-content">
+    <h4>Объяснение ключевых понятий</h4>
+    <p>Перед началом разработки игры важно понять несколько ключевых принципов, на которых будет построен весь проект.</p>
+
+    <h5>1. Сетка 40×40</h5>
+    <p>
+      Игровое поле условно делится на клетки одинакового размера — 40×40 пикселей.
+      Такой размер выбран не случайно: все спрайты (голова, хвост и еда) имеют одинаковые размеры,
+      что позволяет организовать движение строго по сетке.
+    </p>
+    <p>
+      Это означает, что змейка не может двигаться на произвольное количество шагов — её перемещение
+      должно быть кратно размеру клетки. Если шаг будет меньше или больше 40 пикселей, элементы перестанут
+      совпадать с сеткой, и игра будет работать некорректно.
+    </p>
+    <p><strong>Размер клетки определяет:</strong></p>
+    <ul>
+      <li>длину шага головы;</li>
+      <li>координаты появления еды;</li>
+      <li>корректность построения хвоста.</li>
+    </ul>
+
+    <h5>2. Переменная «клетка»</h5>
+    <p>
+      Чтобы не использовать число 40 напрямую во всех скриптах, вводится переменная «клетка».
+      Она хранит размер одного шага.
+    </p>
+    <p><strong>Это позволяет:</strong></p>
+    <ul>
+      <li>легко изменять размер поля, если потребуется;</li>
+      <li>избежать ошибок при повторении числовых значений;</li>
+      <li>сделать алгоритм более гибким.</li>
+    </ul>
+    <p>
+      Если в будущем потребуется изменить размер змейки, достаточно будет изменить значение переменной,
+      а не переписывать весь код.
+    </p>
+
+    <h5>3. Переменная «задержка»</h5>
+    <p>
+      Переменная «задержка» определяет скорость движения змейки. Она используется в блоке «ждать»,
+      который регулирует паузу между шагами.
+    </p>
+    <p>
+      Важно понимать, что значение этой переменной влияет не только на движение головы, но и на работу хвоста.
+      Все элементы должны двигаться синхронно, поэтому скорость должна быть одинаковой для всех частей змейки.
+    </p>
+    <p>
+      Если скорость головы и хвоста будет различаться, игра начнёт работать некорректно.
+    </p>
+
+    <h5>4. Логика роста хвоста</h5>
+    <p>
+      Механизм хвоста основан на создании клонов. Каждый раз, когда голова перемещается на новую клетку,
+      создаётся клон хвоста в предыдущей позиции.
+    </p>
+    <p>
+      Длина хвоста зависит от переменной «счёт». Чем больше значение счёта, тем дольше клон остаётся на поле.
+    </p>
+    <p><strong>Принцип можно представить так:</strong></p>
+    <ul>
+      <li>если счёт равен 0 — хвост отсутствует;</li>
+      <li>если счёт равен 1 — клон остаётся на поле один шаг;</li>
+      <li>если счёт равен 2 — два шага и так далее.</li>
+    </ul>
+    <p>
+      Таким образом, каждый клон «живёт» столько шагов, сколько равно текущему значению счёта.
+    </p>
+
+    <h5>5. Почему важно понимать логику проекта?</h5>
+    <p>
+      Если обучающийся понимает, как связаны между собой размер клетки, шаг движения, скорость и переменная счёта,
+      то он может самостоятельно предсказать результат изменения параметров, исправить ошибки и модифицировать игру
+      (например, изменить скорость или размер поля).
+    </p>
+    <p>
+      Понимание логики делает работу осознанной и позволяет не просто повторить действия, а управлять процессом создания проекта.
+    </p>
+  </div>
+</details>
+
+
+
+      <!-- Подсказки -->
+      <section class="section">
+        <h2 class="section__title">Подсказки (если что-то не получается)</h2>
+        <p class="section__hint">Открывай только нужную подсказку — так ты научишься быстрее.</p>
+
+        <details class="helpPanel" style="margin-top:12px;">
+          <summary class="helpPanel__summary">
+            <span class="helpPanel__badge">Подсказка</span>
+            <span class="helpPanel__title">Постоянное движение головы</span>
+            <span class="helpPanel__chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="helpPanel__body">
+            <div class="videoFrame videoFrame--soft">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Постоянное движение головы" allowfullscreen></iframe>
+            </div>
+          </div>
+        </details>
+
+        <details class="helpPanel" style="margin-top:12px;">
+          <summary class="helpPanel__summary">
+            <span class="helpPanel__badge">Подсказка</span>
+            <span class="helpPanel__title">Появление еды</span>
+            <span class="helpPanel__chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="helpPanel__body">
+            <div class="videoFrame videoFrame--soft">
+            <iframe width="720" height="405" src="https://rutube.ru/play/embed/e75734182b9302ee31adb1851a1166dd?skinColor=FFB300"  allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
+          </div>
+        </details>
+
+        <details class="helpPanel" style="margin-top:12px;">
+          <summary class="helpPanel__summary">
+            <span class="helpPanel__badge">Подсказка</span>
+            <span class="helpPanel__title">Создание хвостов</span>
+            <span class="helpPanel__chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="helpPanel__body">
+            <div class="videoFrame videoFrame--soft">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Создание хвостов" allowfullscreen></iframe>
+            </div>
+          </div>
+        </details>
+
+        <details class="helpPanel" style="margin-top:12px;">
+          <summary class="helpPanel__summary">
+            <span class="helpPanel__badge">Подсказка</span>
+            <span class="helpPanel__title">Управление головой</span>
+            <span class="helpPanel__chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="helpPanel__body">
+            <div class="videoFrame videoFrame--soft">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Управление головой" allowfullscreen></iframe>
+            </div>
+          </div>
+        </details>
+
+        <details class="helpPanel" style="margin-top:12px;">
+          <summary class="helpPanel__summary">
+            <span class="helpPanel__badge">Бонус</span>
+            <span class="helpPanel__title">Игровые ограничения</span>
+            <span class="helpPanel__chev" aria-hidden="true">▾</span>
+          </summary>
+          <div class="helpPanel__body">
+            <p class="helpPanel__text">
+              Чтобы игра была честной: нельзя развернуться назад, есть границы поля и проигрыш при столкновении.
+            </p>
+            <div class="videoFrame videoFrame--soft">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Игровые ограничения" allowfullscreen></iframe>
+            </div>
+          </div>
+        </details>
+
+        <a class="download" href="https://disk.yandex.ru/d/vykObT8H6A6_bQ" download style="margin-top:14px;">
+          <span class="download__icon">📄</span>
+          <span class="download__text">Скачать шпаргалку</span>
+          <span class="download__arrow">→</span>
+        </a>
+      </section>
+
+      <!-- Сдача работы -->
+      <section class="section section--form">
+        <h2 class="section__title">Отправить ссылку на работу</h2>
+        <p class="section__hint">
+          Рекомендуется вставить Google Form через iframe (тогда всё будет записываться в таблицу).
+        </p>
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScY7EBTLjKIH2aIZTMlnEcWns-J5kGvdc12YnVwf7qsHLMh4w/viewform?embedded=true" width="640" height="770" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+     
+        
+      </section>
+
+      <!-- Рефлексия -->
+      <section class="section section--form">
+        <h2 class="section__title">Рефлексия после урока</h2>
+        <p class="section__hint">
+          Это короткий опрос: как прошёл урок по учебе и какое настроение после занятия.
+        </p>
+
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfchbsnHuDa-GNUNGadWggCp_SulwkVZYEe1fa9IFyOIiN4hg/viewform?embedded=true" width="640" height="1092" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+        
+      </section>
+
+      <footer class="footer">
+        <div class="footer__line"></div>
+        <div class="footer__text">Урок 11 • Scratch • 5 класс</div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Скрипт: сохраняет галочки планов (Часть 1 и Часть 2) -->
+  <script>
+    (function () {
+      function setupPlan(containerId, progressId, storageKey) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        const progressEl = document.getElementById(progressId);
+        const checkboxes = Array.from(container.querySelectorAll("input[type='checkbox']"));
+
+        function updateProgress() {
+          if (!progressEl) return;
+          const total = checkboxes.length;
+          const done = checkboxes.filter(cb => cb.checked).length;
+          progressEl.textContent = `Выполнено: ${done} из ${total}`;
+          progressEl.style.color = done === total ? "var(--purple)" : "var(--muted)";
+          progressEl.style.fontWeight = "800";
+        }
+
+        function load() {
+          try {
+            const saved = JSON.parse(localStorage.getItem(storageKey) || "[]");
+            checkboxes.forEach((cb, i) => cb.checked = !!saved[i]);
+          } catch (e) {}
+          updateProgress();
+        }
+
+        function save() {
+          const states = checkboxes.map(cb => cb.checked);
+          localStorage.setItem(storageKey, JSON.stringify(states));
+          updateProgress();
+        }
+
+        checkboxes.forEach(cb => cb.addEventListener("change", save));
+        load();
+      }
+
+      setupPlan("lesson11-plan-a", "lesson11-progress-a", "scratch-lesson11-plan-a-v1");
+      setupPlan("lesson11-plan-b", "lesson11-progress-b", "scratch-lesson11-plan-b-v1");
+    })();
+  </script>
+</body>
+</html>

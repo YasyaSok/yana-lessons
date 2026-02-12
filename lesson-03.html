@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Урок 3 — Лабиринт</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand__logo">S</div>
+      <div class="brand__text">
+        <div class="brand__title">Scratch</div>
+        <div class="brand__sub">Электив • 5 класс</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <div class="nav__title">Уроки</div>
+      <ul class="nav__list">
+          <li><a class="nav__link" href="lesson-01.html">Урок 1</a></li>
+          <li><a class="nav__link" href="lesson-02.html">Урок 2</a></li>
+          <li><a class="nav__link is-active" href="lesson-03.html">Урок 3</a></li>
+          <li><a class="nav__link" href="lesson-04.html">Урок 4</a></li>
+          <li><a class="nav__link" href="lesson-05.html">Урок 5</a></li>
+          <li><a class="nav__link" href="lesson-06.html">Урок 6</a></li>
+          <li><a class="nav__link" href="lesson-07.html">Урок 7</a></li>
+          <li><a class="nav__link" href="lesson-08.html">Урок 8</a></li>
+          <li><a class="nav__link" href="lesson-09.html">Урок 9</a></li>
+          <li><a class="nav__link" href="lesson-10.html">Урок 10</a></li>
+          <li><a class="nav__link" href="lesson-11.html">Урок 11</a></li>
+          <li><a class="nav__link" href="lesson-12.html">Урок 12</a></li>
+          <li><a class="nav__link" href="lesson-13.html">Урок 13</a></li>
+          <li><a class="nav__link" href="lesson-14.html">Урок 14</a></li>
+          <li><a class="nav__link" href="lesson-15.html">Финал👑</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <header class="header">
+      <div class="chip">Урок 3 • 1 час</div>
+      <h1 class="title">Условие «ИЛИ» и управление клавишами — игра «Лабиринт»</h1>
+      <p class="subtitle">
+        В этом уроке мы научимся управлять персонажем стрелочками,
+        использовать логическое условие <strong>«ИЛИ»</strong> и создадим игру «Лабиринт»
+        с бонусами и дебаффами.
+      </p>
+    </header>
+
+    <!-- Видео пример -->
+    <section class="section">
+      <h2 class="section__title">Как выглядит игра</h2>
+
+      <article class="videoCard videoCard--demo" style="margin-top:12px;">
+        <div class="videoFrame">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Лабиринт — пример"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </article>
+
+      <!-- Задачи урока -->
+      <div style="margin-top:18px;">
+        <h3 style="margin-bottom:10px;">Задачи на урок:</h3>
+
+        <div class="planList">
+          <label class="planItem">
+            <input type="checkbox" />
+            <span>Выбрать бонусы и дебафф</span>
+          </label>
+
+          <label class="planItem">
+            <input type="checkbox" />
+            <span>Смоделировать карту лабиринта</span>
+          </label>
+
+          <label class="planItem">
+            <input type="checkbox" />
+            <span>Научиться делать движение стрелочками</span>
+          </label>
+
+          <label class="planItem">
+            <input type="checkbox" />
+            <span>Научиться делать условие с «ИЛИ»</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Основное видео -->
+    <section class="section">
+      <h2 class="section__title">Разбор игры</h2>
+
+      <article class="videoCard">
+        <div class="videoCard__head">
+          <div class="videoCard__num">★</div>
+          <div class="videoCard__meta">
+            <div class="videoCard__title">Создание лабиринта и логика игры</div>
+            <div class="videoCard__desc">
+              Движение, столкновения, бонусы и условие «ИЛИ».
+            </div>
+          </div>
+        </div>
+
+        <div class="videoFrame">
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Разбор лабиринта"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </article>
+    </section>
+
+    <!-- Скачиваемые материалы -->
+<section class="section">
+  <h2 class="section__title">Скачиваемые материалы</h2>
+  <p class="section__hint">
+    Скачай основу игры и доработай её по заданию.
+  </p>
+
+  <a class="gameDownloadBtn"
+     href="assets/lesson2-osnova.sb3"
+     download>
+    <span class="gameDownloadIcon">🎮</span>
+    <span class="gameDownloadText">
+      Скачать основу игры (Scratch)
+    </span>
+    <span class="gameDownloadArrow">→</span>
+  </a>
+</section>
+
+    <!-- Теория -->
+    <section class="section">
+      <h2 class="section__title">Теория</h2>
+
+      <details class="theory-accordion">
+        <summary class="theory-summary">
+          <span class="theory-title">Теория</span>
+          <span class="theory-hint">Нажми, чтобы открыть</span>
+        </summary>
+
+        <div class="theory-content">
+          <h4>Условие «ИЛИ»</h4>
+          <p>
+            Логическое «ИЛИ» используется, когда нужно проверить
+            <strong>одно из нескольких условий</strong>.
+          </p>
+
+          <ul>
+            <li>Если касается стены ИЛИ касается ловушки → проигрыш</li>
+            <li>Если касается бонуса ИЛИ касается супер-бонуса → начислить очки</li>
+          </ul>
+
+          <h5>Управление стрелочками</h5>
+          <p>
+            Используем блоки «когда клавиша нажата» и меняем направление движения.
+            Важно не забывать задавать правильный угол поворота.
+          </p>
+
+          <h5>Почему это важно</h5>
+          <p>
+            Логика «ИЛИ» используется почти во всех играх:
+            проверка столкновений, победа, проигрыш, разные сценарии.
+          </p>
+        </div>
+      </details>
+    </section>
+
+    <!-- Подсказка -->
+    <section class="section">
+      <h2 class="section__title">Если что-то не получается</h2>
+
+      <details class="helpPanel">
+        <summary class="helpPanel__summary">
+          <span class="helpPanel__badge">Подсказка</span>
+          <span class="helpPanel__title">Движение и условие «ИЛИ»</span>
+          <span class="helpPanel__chev">▾</span>
+        </summary>
+
+        <div class="helpPanel__body">
+          <div class="videoFrame videoFrame--soft">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Подсказка лабиринт"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </details>
+
+      <a class="download" href="#" download style="margin-top:14px;">
+        <span class="download__icon">📄</span>
+        <span class="download__text">Скачать шпаргалку</span>
+        <span class="download__arrow">→</span>
+      </a>
+    </section>
+
+    <!-- Сдача -->
+    <section class="section section--form">
+      <h2 class="section__title">Сдать работу</h2>
+      <p class="section__hint">
+        Вставь Google Form для сохранения ответов в таблицу.
+      </p>
+    </section>
+
+    <!-- Рефлексия -->
+    <section class="section section--form">
+      <h2 class="section__title">Рефлексия</h2>
+
+      <form class="form">
+        <label class="field">
+          <span class="field__label">Понял(а) ли ты условие «ИЛИ»?</span>
+          <input class="field__input" type="text" placeholder="Да / Частично / Нет" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Оценка по сложности (1–5)</span>
+          <input class="field__input" type="number" min="1" max="5" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Настроение после урока (1–5)</span>
+          <input class="field__input" type="number" min="1" max="5" />
+        </label>
+
+        <button class="btn" type="button">Отправить</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__line"></div>
+      <div class="footer__text">Урок 3 • Scratch • 5 класс</div>
+    </footer>
+
+  </main>
+</div>
+</body>
+</html>

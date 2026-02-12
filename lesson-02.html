@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Урок 2 — Условие «если иначе»</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand__logo">S</div>
+        <div class="brand__text">
+          <div class="brand__title">Scratch</div>
+          <div class="brand__sub">Электив • 5 класс</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <div class="nav__title">Уроки</div>
+        <ul class="nav__list">
+          <li><a class="nav__link" href="lesson-01.html">Урок 1</a></li>
+          <li><a class="nav__link is-active" href="lesson-02.html">Урок 2</a></li>
+          <li><a class="nav__link" href="lesson-03.html">Урок 3</a></li>
+          <li><a class="nav__link" href="lesson-04.html">Урок 4</a></li>
+          <li><a class="nav__link" href="lesson-05.html">Урок 5</a></li>
+          <li><a class="nav__link" href="lesson-06.html">Урок 6</a></li>
+          <li><a class="nav__link" href="lesson-07.html">Урок 7</a></li>
+          <li><a class="nav__link" href="lesson-08.html">Урок 8</a></li>
+          <li><a class="nav__link" href="lesson-09.html">Урок 9</a></li>
+          <li><a class="nav__link" href="lesson-10.html">Урок 10</a></li>
+          <li><a class="nav__link" href="lesson-11.html">Урок 11</a></li>
+          <li><a class="nav__link" href="lesson-12.html">Урок 12</a></li>
+          <li><a class="nav__link" href="lesson-13.html">Урок 13</a></li>
+          <li><a class="nav__link" href="lesson-14.html">Урок 14</a></li>
+          <li><a class="nav__link" href="lesson-15.html">Финал👑</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar__hint">
+        <div class="sidebar__hintTitle">Подсказка</div>
+        <div class="sidebar__hintText">
+          Сначала посмотри «как выглядит игра», потом «разбор». Теория — под скрытой плашкой.
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <div class="blob blob--purple" aria-hidden="true"></div>
+      <div class="blob blob--yellow" aria-hidden="true"></div>
+
+      <header class="header">
+        <div class="chip">Урок 2 • 1 час</div>
+        <h1 class="title">Условие «если иначе» — обставляем дом</h1>
+        <p class="subtitle">
+          В этом уроке мы научимся использовать условие <strong>«если…то…иначе»</strong> и сделаем игру:
+          нажимаем на предметы в комнате — и они меняют внешний вид (как будто обустраиваем дом).
+        </p>
+      </header>
+
+      <!-- Видео: результат -->
+      <section class="section">
+        <h2 class="section__title">Как выглядит игра (пример результата)</h2>
+        <article class="videoCard videoCard--demo" style="margin-top:12px;">
+          <div class="videoFrame">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Обустраиваем дом — результат"
+              allowfullscreen></iframe>
+          </div>
+        </article>
+      </section>
+
+      <!-- Видео: разбор -->
+      <section class="section">
+        <h2 class="section__title">Видео «Разбор»</h2>
+        <p class="section__hint">Здесь объясняется суть переменных и условия «если…то…иначе» на примере игры.</p>
+
+        <article class="videoCard" style="margin-top:12px;">
+          <div class="videoCard__head">
+            <div class="videoCard__num">★</div>
+            <div class="videoCard__meta">
+              <div class="videoCard__title">Разбор: переменные + «если…то…иначе»</div>
+              <div class="videoCard__desc">Сделаем предмет, который меняется по клику.</div>
+            </div>
+          </div>
+          <div class="videoFrame">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Разбор урока 2"
+              allowfullscreen></iframe>
+          </div>
+        </article>
+      </section>
+      <!-- Скачиваемые материалы -->
+<section class="section">
+  <h2 class="section__title">Скачиваемые материалы</h2>
+  <p class="section__hint">
+    Скачай основу игры и доработай её по заданию.
+  </p>
+
+  <a class="gameDownloadBtn"
+     href="assets/lesson2-osnova.sb3"
+     download>
+    <span class="gameDownloadIcon">🎮</span>
+    <span class="gameDownloadText">
+      Скачать основу игры (Scratch)
+    </span>
+    <span class="gameDownloadArrow">→</span>
+  </a>
+</section>
+
+
+      <!-- Теория (скрытая плашка) -->
+      <section class="section">
+        <h2 class="section__title">Теория</h2>
+        <p class="section__hint">Открывай, если хочешь понять логику и не делать «наугад».</p>
+
+        <!-- Скрытая плашка "Теория" -->
+        <details class="theory-accordion">
+          <summary class="theory-summary">
+            <span class="theory-title">Теория</span>
+            <span class="theory-hint">Нажми, чтобы открыть</span>
+          </summary>
+
+          <div class="theory-content">
+            <h4>Переменные и условие «если…то…иначе»</h4>
+            <p>
+              <strong>Переменная</strong> — это «коробочка», где хранится число или текст.
+              В игре она помогает помнить состояние предмета: например, какой сейчас цвет у дивана.
+            </p>
+
+            <h5>1) Переменная «режим» (или «цвет»)</h5>
+            <p>
+              Мы создаём переменную, например <strong>«режим»</strong>.
+              Она будет хранить число: 1 или 2.
+            </p>
+            <ul>
+              <li>если режим = 1 → предмет выглядит так (костюм 1)</li>
+              <li>если режим = 2 → предмет выглядит иначе (костюм 2)</li>
+            </ul>
+
+            <h5>2) Условие «если…то…иначе»</h5>
+            <p>
+              Условие проверяет: <strong>правда ли утверждение?</strong>
+              Например: «режим = 1».
+            </p>
+            <p><strong>Пример логики:</strong></p>
+            <ul>
+              <li>Если режим = 1 → переключи на режим 2</li>
+              <li>Иначе → переключи на режим 1</li>
+            </ul>
+
+            <h5>3) Почему это важно</h5>
+            <p>
+              Эта логика используется в играх постоянно: переключатели, меню, уровни сложности,
+              предметы, которые меняют состояние, двери/ключи, включение света и т.д.
+            </p>
+          </div>
+        </details>
+      </section>
+
+      <!-- Помогающее видео + шпаргалка -->
+     <section class="section">
+  <h2 class="section__title">Если что-то не получается</h2>
+  <p class="section__hint">
+    Открывай только если действительно нужно — попробуй сначала сделать самостоятельно 🙂
+  </p>
+
+  <details class="helpPanel" style="margin-top:12px;">
+    <summary class="helpPanel__summary">
+      <span class="helpPanel__badge">Подсказка</span>
+      <span class="helpPanel__title">Помогающее видео</span>
+      <span class="helpPanel__chev" aria-hidden="true">▾</span>
+    </summary>
+
+    <div class="helpPanel__body">
+      <p class="helpPanel__text">
+        Пошаговое объяснение: создание переменной → условие → смена костюма по клику.
+      </p>
+
+      <div class="videoFrame videoFrame--soft">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="Помогающее видео"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </details>
+
+  <!-- Скачать шпаргалку -->
+  <a class="download" href="#" download style="margin-top:14px;">
+    <span class="download__icon">📄</span>
+    <span class="download__text">Скачать шпаргалку</span>
+    <span class="download__arrow">→</span>
+  </a>
+</section>
+
+      <!-- Сдача работы -->
+      <section class="section section--form">
+        <h2 class="section__title">Сдать работу</h2>
+        <p class="section__hint">
+          Вставь Google Form через iframe, чтобы ответы сохранялись в таблицу.
+        </p>
+
+        <!-- Вставь сюда iframe Google Form для сдачи -->
+        <!--
+        <iframe
+          src="https://docs.google.com/forms/d/e/XXXXXXXX/viewform?embedded=true"
+          width="100%"
+          height="780"
+          frameborder="0">
+        </iframe>
+        -->
+
+        <!-- Заглушка под форму -->
+        <form class="form">
+          <label class="field">
+            <span class="field__label">ФИО</span>
+            <input class="field__input" type="text" placeholder="Например: Иванов Иван" />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Класс</span>
+            <input class="field__input" type="text" placeholder="Например: 5А" />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Ссылка на проект Scratch</span>
+            <input class="field__input" type="url" placeholder="Вставь ссылку на опубликованный проект" />
+          </label>
+
+          <button class="btn" type="button">Отправить</button>
+          <div class="form__note">Сейчас это дизайн. Для реальной сдачи вставь Google Form.</div>
+        </form>
+      </section>
+
+      <!-- Рефлексия -->
+      <section class="section section--form">
+        <h2 class="section__title">Рефлексия</h2>
+        <p class="section__hint">
+          Отметь, как прошёл урок (по учебе) и какое настроение после занятия.
+        </p>
+
+        <!-- Лучший вариант: отдельная Google Form рефлексии -->
+        <!--
+        <iframe
+          src="https://docs.google.com/forms/d/e/YYYYYYYY/viewform?embedded=true"
+          width="100%"
+          height="820"
+          frameborder="0">
+        </iframe>
+        -->
+
+        <!-- Заглушка (дизайн) -->
+        <form class="form">
+          <label class="field">
+            <span class="field__label">Как ты понял(а) тему?</span>
+            <input class="field__input" type="text" placeholder="Например: Понял(а) / Частично / Было сложно" />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Оценка по учебе (1 — сложно, 5 — легко)</span>
+            <input class="field__input" type="number" min="1" max="5" placeholder="1–5" />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Настроение после урока (1 — плохое, 5 — отличное)</span>
+            <input class="field__input" type="number" min="1" max="5" placeholder="1–5" />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Что было самым трудным?</span>
+            <input class="field__input" type="text" placeholder="Коротко напиши" />
+          </label>
+
+          <button class="btn" type="button">Отправить</button>
+          <div class="form__note">Лучше заменить на Google Form, чтобы всё сохранялось в таблицу.</div>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__line"></div>
+        <div class="footer__text">Урок 2 • Scratch • 5 класс</div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
